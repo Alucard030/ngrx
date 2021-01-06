@@ -6,7 +6,7 @@ export const DOWNVOTE   = '[Post] Downvote';
 export const RESET      = '[Post] Reset';
 
 
-export class EditText implements Action {
+export class EditText {
   readonly type = EDIT_TEXT;
 
   /// user a constructor to send a payload with the action

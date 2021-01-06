@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Post } from './model/post.model';
 import * as PostActions from './actions/post.action'
 
 
 
 interface AppState {
-  post: Post;
+  storeData: Post;
 }
 
 @Component({
@@ -23,7 +23,7 @@ export class AppComponent {
   text: string; /// form input val
 
   constructor(private store: Store<AppState>) {
-    this.post = this.store.select('post')
+    this.post = this.store.select('storeData')
   }
 
   editText() {

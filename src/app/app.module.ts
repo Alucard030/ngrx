@@ -13,7 +13,7 @@ import { postReducer } from './reducers/post.reducers';
   imports: [
     BrowserModule,
     FormsModule,
-    StoreModule.forRoot({post:postReducer})
+    StoreModule.forRoot({storeData:postReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
